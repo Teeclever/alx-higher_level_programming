@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for p in range(97, 123):
-    print("%c" % p, end = '')
+for a in range(ord('a'), ord('z')+1):
+    print("{:s}".format(chr(a)), end='')
