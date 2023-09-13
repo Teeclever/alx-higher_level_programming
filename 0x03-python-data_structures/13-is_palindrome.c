@@ -22,8 +22,8 @@ void rev_listint(listint_t **h)
 }
 
 /**
- * is_palindrome - A function checks if a list is a palindrome.
- * @head: Double pointer
+ * is_palindrome - a function tht Checks if a list is a palindrome.
+ * @head: Double pointer to the linked list.
  * Return: 1 if it is a palindrome, 0 if not.
  */
 int is_palindrome(listint_t **head)
@@ -31,6 +31,7 @@ int is_palindrome(listint_t **head)
 	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
+
 	while (1)
 	{
 		fast = fast->next->next;
@@ -46,7 +47,8 @@ int is_palindrome(listint_t **head)
 		}
 		slow = slow->next;
 	}
-	
+	rev_listint(&dup);
+
 	while (dup && temp)
 	{
 		if (temp->n == dup->n)
@@ -57,7 +59,8 @@ int is_palindrome(listint_t **head)
 		else
 			return (0);
 	}
-
+	
 	if (!dup)
 		return (1);
 	return (0);
+}
