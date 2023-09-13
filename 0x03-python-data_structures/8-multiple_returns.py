@@ -5,5 +5,5 @@ def multiple_returns(sentence):
     if lent == 0:
         return (0, None)
     else:
-       	store = (lent, sentence[0])
+        store = (lent, sentence[0])
         return store
