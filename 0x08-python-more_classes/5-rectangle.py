@@ -63,7 +63,7 @@ class Rectangle:
         """Computes and returns the perimeter of the rectangle."""
         if any((self.height == 0, self.width == 0)):
             return 0
-        return 2*(self.height + self.width)
+        return 2 * (self.height + self.width)
 
     def __str__(self) -> str:
         """Draws the square.
@@ -73,7 +73,7 @@ class Rectangle:
         """
         if any((self.width == 0, self.height == 0)):
             return ""
-        return "\n".join(('#' * self.width) for _ in range(self.height))
+        return "\n".join(("#" * self.width) for _ in range(self.height))
 
     def __repr__(self) -> str:
         """eval() compatible representation of object

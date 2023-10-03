@@ -8,7 +8,7 @@ class Rectangle:
     """Representation of a Rectangle class"""
 
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize a rectangle instance.
@@ -67,7 +67,7 @@ class Rectangle:
         """Computes and returns the perimeter of the rectangle."""
         if any((self.height == 0, self.width == 0)):
             return 0
-        return 2*(self.height + self.width)
+        return 2 * (self.height + self.width)
 
     def __str__(self) -> str:
         """Draws the square.
