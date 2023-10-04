@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains a function that splits text by specified delimiters."""
+"""A  module contains a function that splits text by specified delimiters."""
 
 
 def text_indentation(text):

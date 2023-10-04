@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-""" This module contains a simple function that returns the sum of
-    2 integers.
+""" A module contains a simple function that returns the sum of integer
 """
 
 
 def add_integer(a, b=98) -> int:
-    """ Computes and returns the sum of 2 integers.
+    """ compute and returns the sum of 2 integers.
 
     Args:
         a (int or float): First number to be added.

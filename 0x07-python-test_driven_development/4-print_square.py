@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""This module contains a function that prints a square."""
+"""A  module contains a function that prints a square."""
 
 
 def print_square(size):
-    """Prints a square with the character #
+    """A function Prints a square with the character #
 
     Args:
         size (int): The size of the square.

@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""This module contains a function that prints a person's full name."""
+"""A module contains a function that prints a person's full name."""
 
 
 def say_my_name(first_name, last_name=""):
-    """Prints a person's full name.
+    """A function that Prints a person's full name.
 
     Args:
         first_name (str): First name
@@ -11,7 +11,7 @@ def say_my_name(first_name, last_name=""):
 
     Raises:
         TypeError: If first name is not a string.
-        TypeError: If last name is not a string.
+        TypeError: If last name is not a strig.
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
