@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Unit Test File for Max Integer Function"""
 import unittest
-max_integer = __import__('6-max_integer').max_integer
+
+max_integer = __import__("6-max_integer").max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
@@ -45,7 +46,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_string(self):
         """Test when the input is a string."""
         string = "Brennan"
-        self.assertEqual(max_integer(string), 'r')
+        self.assertEqual(max_integer(string), "r")
 
     def test_list_of_strings(self):
         """Test when the list contains strings."""
@@ -67,5 +68,5 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(duplicates), 5)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

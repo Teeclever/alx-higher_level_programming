@@ -21,9 +21,8 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_a must be a list or m_b must be a list")
 
     err_msg1 = "m_a must be a list of lists or m_b must be a list of lists"
-    if (
-        not all(isinstance(row, list) for row in m_a)
-        or not all(isinstance(row, list) for row in m_b)
+    if not all(isinstance(row, list) for row in m_a) or not all(
+        isinstance(row, list) for row in m_b
     ):
         raise TypeError(err_msg1)
 
