@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
 """
-Matrix multiplication module.
-Multiplies two matrices.
-Must be list/ list of list
-Raise exceptions where necessary.
+Matrix multiplication module
 """
 
 
