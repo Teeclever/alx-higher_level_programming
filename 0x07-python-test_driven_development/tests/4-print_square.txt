@@ -1,0 +1,132 @@
+========================
+Print Square
+========================
+
+
+Import module
+========================
+    >>> print_square = __import__('4-print_square').print_square
+
+
+Tests
+========================
+
+* Print a square of size 4:
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+* Print an empty string:
+
+    >>> print("")
+    <BLANKLINE>
+
+* Print a square of size 10:
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+* Print a square of size 0:
+
+    >>> print_square(0)
+
+* Print a square of size 1:
+
+    >>> print_square(1)
+    #
+
+* Print a square with missing size argument:
+
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+* Print a square with a float size:
+
+    >>> print_square(1.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+* Print a square with a string size:
+
+    >>> print_square("1")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+* Print a square with a tuple as the size:
+
+    >>> print_square(())
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+* Print a square with a list as the size:
+
+    >>> print_square([])
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+* Print a square with a dictionary as the size:
+
+    >>> print_square({})
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+* Print a square with a negative size:
+
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+* Print a square with a negative float size:
+
+    >>> print_square(-1.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+* Print a square with `None` as the size:
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+* Print a square with two arguments instead of one:
+
+    >>> print_square(1, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
+
+* Print a square with positive infinity as the size:
+
+    >>> print_square(float("inf"))
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+* Print a square with negative infinity as the size:
+
+    >>> print_square(float("-inf"))
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer

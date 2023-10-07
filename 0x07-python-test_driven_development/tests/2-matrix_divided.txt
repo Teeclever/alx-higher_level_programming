@@ -1,0 +1,127 @@
+========================
+Matrix Divided
+========================
+
+
+Import module
+========================
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+Tests
+========================
+
+* Divide a matrix with positive integers by a positive integer divisor
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+* Divide a matrix with negative integers by a positive integer divisor
+
+    >>> matrix_divided([[-1, -2, -3], [-4, -5, -6]], 3)
+    [[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+
+* Divide a matrix by zero
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+* Divide a matrix with a tuple instead of a list
+
+    >>> matrix_divided([(1, 2, 3), [4, 5, 6]], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+* Divide a matrix with a set instead of a list
+
+    >>> matrix_divided([[1, 2, 3], {4, 5, 6}], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+* Divide a matrix with an empty string instead of a number
+
+    >>> matrix_divided([["", 2, 3], [4, 5, 6]], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+* Divide a matrix with a dictionary instead of a number
+
+    >>> matrix_divided([[1, 2, 3], {"a": 5, "b": 6}], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+* Divide a matrix with None instead of a number
+
+    >>> matrix_divided([[1, 2, 3], None], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+* Divide a matrix by a string instead of a number
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], "3")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+* Divide a matrix by an empty list instead of a number
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], [])
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+* Divide a matrix by an empty tuple instead of a number
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], ())
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+* Divide a matrix by an empty dictionary instead of a number
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], {})
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+* Divide a matrix by None instead of a number
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], None)
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+* Divide a matrix by positive infinity
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], float("inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+* Divide a matrix by negative infinity
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], float("-inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+* Divide a matrix with a float element of positive infinity
+
+    >>> matrix_divided([[4, 5, 6], float("inf")], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+* Divide a matrix with a float element of negative infinity
+
+    >>> matrix_divided([[4, 5, 6], float("-inf")], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats

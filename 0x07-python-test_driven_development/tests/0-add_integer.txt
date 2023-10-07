@@ -1,0 +1,212 @@
+========================
+0. Integer addition
+========================
+
+
+Import module
+========================
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+
+Tests
+========================
+
+* Add 2 regular integer numbers
+
+    >>> add_integer(54, 1)
+    55
+
+
+* Add 2 regular integer numbers (one negative)
+
+    >>> add_integer(100, -2)
+    98
+
+
+* Pass a single integer argument
+
+    >>> add_integer(2)
+    100
+
+
+* Pass a single float argument
+
+    >>> add_integer(100.3, -2)
+    98
+
+
+* Missing argument (should raise a TypeError)
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+* Empty string argument (should raise a TypeError)
+
+    >>> add_integer("")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+
+* Empty string arguments (should raise a TypeError)
+
+    >>> add_integer("", "")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+
+* Float argument as second parameter (should raise a TypeError)
+
+    >>> add_integer(15, "1")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+
+* None argument (should raise a TypeError)
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+
+* Empty list argument (should raise a TypeError)
+
+    >>> add_integer(list())
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+
+* List with integer argument (should raise a TypeError)
+
+    >>> add_integer(list(1))
+    Traceback (most recent call last):
+    ...
+    TypeError: 'int' object is not iterable
+
+
+* Empty dictionary argument (should raise a TypeError)
+
+    >>> add_integer({})
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+
+* Dictionary argument (should raise a TypeError)
+
+    >>> add_integer({"1": 1})
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+
+* Infinite float argument (should raise an OverflowError)
+
+    >>> add_integer(float("inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+
+* Negative infinite float argument (should raise an OverflowError)
+
+    >>> add_integer(float("-inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+
+* Division by zero argument (should raise a ZeroDivisionError)
+
+    >>> add_integer(12 / 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+
+* Infinite float as second parameter (should raise an OverflowError)
+
+    >>> add_integer(1, float("-inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+
+* Infinite float as second parameter (should raise an OverflowError)
+
+    >>> add_integer(1, float("inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+
+* Two infinite floats as parameters (should raise an OverflowError)
+
+    >>> add_integer(float("inf"), float("inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+
+* Negative infinite and positive infinite floats as parameters (should raise an OverflowError)
+
+    >>> add_integer(float("-inf"), float("inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+
+* NaN float argument (should raise a ValueError)
+
+    >>> add_integer(float("nan"))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+
+* Add two large positive integers
+
+    >>> add_integer(999999999, 888888888)
+    1888888887
+
+* Add two large negative integers
+
+    >>> add_integer(-999999999, -888888888)
+    -1888888887
+
+* Add a large positive integer and a small negative integer
+
+    >>> add_integer(1000000000, -1)
+    999999999
+
+* Add a large negative integer and a small positive integer
+
+    >>> add_integer(-1000000000, 1)
+    -999999999
+
+* Add a large positive integer and a large positive float
+
+    >>> add_integer(1000000000, 3.14159)
+    1000000003
+
+* Add a large negative integer and a large negative float
+
+    >>> add_integer(-1000000000, -3.14159)
+    -1000000003
+
+* Add a large positive float and a small negative integer
+
+    >>> add_integer(3.14159, -1)
+    2
+
+* Add a large negative float and a small positive integer
+
+    >>> add_integer(-3.14159, 1)
+    -2
