@@ -7,7 +7,7 @@ Matrix multiplication module
 
 def matrix_mul(m_a, m_b):
     """
-    Multiply matrices.
+    Multiply matrices
 
     Args:
         m_a: matrix a
