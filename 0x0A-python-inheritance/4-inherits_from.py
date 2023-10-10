@@ -1,17 +1,20 @@
 #!/usr/bin/python3
-"""Only sub class of"""
+
+"""A function that check if an object is an instance or not
+"""
 
 
 def inherits_from(obj, a_class):
     """
-        Checks if `obj` is an instance of a subclass of `a_class`
-        but not exactly an instance of `a_class` itself.
+      A function that checks if obj is an instance of a subclass of a class
+      Args:
+      obj: an object
+      a_class: any class object
 
-    Args:
-        obj (any): Any data type
-        a_class (ant): Any class object
-
-    Returns:
-        bool: True or False
-    """
-    return issubclass(type(obj), a_class) and type(obj) is not a_class
+      Returns:
+            Ture or false
+       """
+    if not type(obj) == a_class and issubclass(type(obj), a_class):
+        return True
+    else:
+        return False
