@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """Defines a BaseGeometry class."""
+    """A BaseGeometry class."""
 
     def area(self):
         """Computes the area of the geometry.
