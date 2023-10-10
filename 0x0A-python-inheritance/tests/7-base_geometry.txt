@@ -1,0 +1,198 @@
+========================
+Base Geometry
+========================
+
+
+Import module
+========================
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Tests
+========================
+
+* Create new instance
+
+    >>> bg = BaseGeometry()
+
+* Call the area() method
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+* Call the area() method with 1 arguments
+
+    >>> bg.area(9)
+    Traceback (most recent call last):
+    ...
+    TypeError: area() takes 1 positional argument but 2 were given
+
+* Call the area() method with 2 arguments
+
+    >>> bg.area(45, 9)
+    Traceback (most recent call last):
+    ...
+    TypeError: area() takes 1 positional argument but 3 were given
+
+* Call the integer_validator() method with valid arguments
+
+    >>> bg.integer_validator("my_int", 12)
+    >>> bg.integer_validator("width", 89)
+
+* Call the integer_validator() method with different data types in the first as argument
+
+    >>> bg.integer_validator(16, 2)
+    >>> bg.integer_validator(['a'], 89)
+    >>> bg.integer_validator({5}, 89)
+    >>> bg.integer_validator(11.56, 89)
+    >>> bg.integer_validator(None, 89)
+    >>> bg.integer_validator({'k': 'v'}, 89)
+
+* Calling the integer_validator() method with a string as second argument
+
+    >>> bg.integer_validator('game', "data")
+    Traceback (most recent call last):
+    ...
+    TypeError: game must be an integer
+
+* Calling the integer_validator() method with `float` as second argument
+
+    >>> bg.integer_validator('name', 45.1827)
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+* Calling the integer_validator() method with negative float as second argument
+
+    >>> bg.integer_validator('golf', -308.4456)
+    Traceback (most recent call last):
+    ...
+    TypeError: golf must be an integer
+
+* Calling the integer_validator() method with `list` as second argument
+
+    >>> bg.integer_validator('alpha', ["abc", 32])
+    Traceback (most recent call last):
+    ...
+    TypeError: alpha must be an integer
+
+* Calling the integer_validator() method with `set` as second argument
+
+    >>> bg.integer_validator('bravo', {34, 'd', "base"})
+    Traceback (most recent call last):
+    ...
+    TypeError: bravo must be an integer
+
+* Calling the integer_validator() method with `dictionary` as second argument
+
+    >>> bg.integer_validator('charlie', {"name": "Charlie", "id": 2012245})
+    Traceback (most recent call last):
+    ...
+    TypeError: charlie must be an integer
+
+* Calling the integer_validator() method with positive infinity as second argument
+
+    >>> bg.integer_validator('delta', 'inf')
+    Traceback (most recent call last):
+    ...
+    TypeError: delta must be an integer
+
+* Calling the integer_validator() method with negative infinity as second argument
+
+    >>> bg.integer_validator('echo', '-inf')
+    Traceback (most recent call last):
+    ...
+    TypeError: echo must be an integer
+
+* Calling the integer_validator() method with positive float infinity as second argument
+
+    >>> bg.integer_validator('delta', float('inf'))
+    Traceback (most recent call last):
+    ...
+    TypeError: delta must be an integer
+
+* Calling the integer_validator() method with negative float infinity as second argument
+
+    >>> bg.integer_validator('echo', float('-inf'))
+    Traceback (most recent call last):
+    ...
+    TypeError: echo must be an integer
+
+* Calling the integer_validator() method with a infinite float value
+
+    >>> bg.integer_validator("inf", 1e500)
+    Traceback (most recent call last):
+    ...
+    TypeError: inf must be an integer
+
+* Calling the integer_validator() method with NaN as second argument
+
+    >>> bg.integer_validator("nan", float("nan"))
+    Traceback (most recent call last):
+    ...
+    TypeError: nan must be an integer
+
+* Calling the integer_validator() method with `tuple` as second argument
+
+    >>> bg.integer_validator('fox', ("text", 77, ))
+    Traceback (most recent call last):
+    ...
+    TypeError: fox must be an integer
+
+* Calling the integer_validator() method with `None` as second argument
+
+    >>> bg.integer_validator('india', None)
+    Traceback (most recent call last):
+    ...
+    TypeError: india must be an integer
+
+* Calling the integer_validator() method with `Boolean` as second argument
+
+    >>> bg.integer_validator('kilo', True)
+    Traceback (most recent call last):
+    ...
+    TypeError: kilo must be an integer
+
+* Calling the integer_validator() method with `object` as second argument
+
+    >>> bg.integer_validator('object', object)
+    Traceback (most recent call last):
+    ...
+    TypeError: object must be an integer
+
+* Calling the integer_validator() method with no arguments
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+* Calling the integer_validator() method with one argument
+
+    >>> bg.integer_validator("india")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+* Calling the integer_validator() method with more than two arguments
+
+    >>> bg.integer_validator("india", 11, -3)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+* Calling the integer_validator() method with negative integer as second argument
+
+    >>> bg.integer_validator('key', -31)
+    Traceback (most recent call last):
+    ...
+    ValueError: key must be greater than 0
+
+* Calling the integer_validator() method with 0 as second argument
+
+    >>> bg.integer_validator('amount', 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: amount must be greater than 0
