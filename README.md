@@ -21,31 +21,47 @@ Table of Contents
 ## Introduction
 
 Python is a versatile and powerful programming language used in various domains such as web development, data science, machine learning, and more. This repository aims to provide a structured overview of Python concepts, from the basics to advanced topics, to assist learners at all levels.
-Getting Started
+
+
+ ## Getting Started
 
 If you are new to Python, start with the basics. Familiarize yourself with the Python syntax, data types, and control flow structures. The Getting Started directory contains resources for beginners.
 Basic Concepts
 
 Explore fundamental Python concepts, including:
 
-   > Variables and Data Types
-    Control Flow (if statements, loops)
-    Functions and Modules
-    Lists, Sets, and Dictionaries
-    Object-Oriented Programming (OOP)
-    Exception Handling
+   - Variables and Data Types
+ - Control Flow (if statements, loops)
+- Functions and Modules
+- Lists, Sets, and Dictionaries
+- Object-Oriented Programming (OOP)
+- Exception Handling
 
 Each concept is organized in its respective directory under Basic Concepts.
 Advanced Topics
 
 Delve into more advanced Python topics, such as:
 
-   > Decorators
-    Generators
-    Context Managers
-    Multithreading and Multiprocessing
-    File Handling
-    Regular Expressions
+  -  Decorators
+  -  Generators
+  -  Context Managers
+  -  Multithreading and Multiprocessing
+  -  File Handling
+  -  Regular Expressions
+
+Find detailed explanations and examples in the Advanced Topics directory.
+
+```python
+    name = input("Please enter your name: ")
+    print(f"Welcome {name} to python programming language")
+
+
+    >>>>
+    please enter your name: Omotayo
+   >>>> Welcome Omotayo to python programming
+
+
+```
 
 ## Zen of Python 
 
