@@ -1,7 +1,10 @@
 #!/usr/bin/node
-const myvar = process.argv.splice(2);
-if (myvar.length > 0) {
+const argsNumber = process.argv.length - 2;
+
+if (argsNumber === 0) {
+  console.log('No argument');
+} else if (argsNumber === 1) {
   console.log('Argument found');
 } else {
-  console.log('No argument');
+  console.log('Arguments found');
 }
