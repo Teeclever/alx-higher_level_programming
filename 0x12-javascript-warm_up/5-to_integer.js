@@ -1,9 +1,9 @@
 #!/usr/bin/node
+const { argv } = require('process');
 
-const myvar = process.argv.splice(2);
-
-if (Number.isInteger(parseInt(myvar[0]))) {
-  console.log(`My number: ${parseInt(myvar[0])}`);
-} else {
+if (!argv[2] || !parseInt(argv[2])) {
   console.log('Not a number');
+} else {
+  console.log(`My number: ${parseInt(argv[2])}`);
 }
+console.log(argv)
