@@ -11,7 +11,7 @@ The project consists of the following tasks:
    - File: `0-javascript_is_amazing.js`
 
 2. **Task 1: Write a script that prints three lines.**
-   - File: `1-multi_languages.js`
+   - File: `1-multi_languages.js `
 
 3. **Task 2: Write a script that prints a message depending on the number of arguments passed.**
    - File: `2-arguments.js`
