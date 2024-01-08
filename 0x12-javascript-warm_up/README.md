@@ -10,7 +10,7 @@ The project consists of the following tasks:
 1. **Task 0: Write a script that prints "JavaScript is amazing" to the console.**
    - File: `0-javascript_is_amazing.js`
 
-2. **Task 1: Write a script that prints three lines.**
+2. **Task 1: Write a script that prints three liness.**
    - File: `1-multi_languages.js `
 
 3. **Task 2: Write a script that prints a message depending on the number of arguments passed.**
