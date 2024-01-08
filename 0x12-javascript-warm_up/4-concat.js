@@ -1,8 +1,10 @@
 #!/usr/bin/node
-const concatString = process.argv;
+const { argv } = require('process');
 
-if (concatString[2]) {
-  console.log(concatString[2] + ' is ' + concatString[3]);
-} else {
+if (!argv[2]) {
   console.log('undefined is undefined');
+} else if (!argv[3]) {
+  console.log(`${argv[2]} is undefined`);
+} else {
+  console.log(`${argv[2]} is ${argv[3]}`);
 }

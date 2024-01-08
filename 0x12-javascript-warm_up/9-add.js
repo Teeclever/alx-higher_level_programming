@@ -1,12 +1,10 @@
 #!/usr/bin/node
+const { argv } = require('process');
 
-const firstArg = parseInt(process.argv[2]);
-const secondArg = parseInt(process.argv[3]);
+const num1 = parseInt(argv[2]);
+const num2 = parseInt(argv[3]);
+console.log(add(num1, num2));
 
 function add (a, b) {
-  if (isNaN(a) || isNaN(b)) {
-    return NaN;
-  }
   return a + b;
 }
-console.log(add(firstArg, secondArg));
