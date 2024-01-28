@@ -1,6 +1,6 @@
 # Python 
 
-> Welcome to the Python Concepts Repository! This repository is a comprehensive collection of Python concepts, covering a wide range of topics to help you deepen your understanding of the Python programming language. ....
+> Welcome to the Python Concepts Repository! This repository is a comprehensive collection of Python concepts, covering a wide range of topics to help you deepen your understanding of the Python programming language...
 ---
 
 ![](https://spectrum.ieee.org/media-library/purple-background-with-a-yellow-hand-shape-made-up-of-names-of-programming-languages-holds-the-word-python-which-is-large.jpg?id=27260345&width=1200&height=900)
